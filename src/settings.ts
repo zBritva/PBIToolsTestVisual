@@ -26,15 +26,14 @@
 
 "use strict";
 
-import { dataViewObjectsParser } from 'powerbi-visuals-utils-dataviewutils';
-
-import DataViewObjectsParser = dataViewObjectsParser.DataViewObjectsParser;
+import * as dataviewutils from 'powerbi-visuals-utils-dataviewutils';
+import DataViewObjectsParser = dataviewutils.dataViewObjectsParser.DataViewObjectsParser;
 
 export class VisualSettings extends DataViewObjectsParser {
   public dataPoint: DataPointSettings = new DataPointSettings();
 }
 
-export class DataPointSettings extends DataViewObjectsParser{
+export class DataPointSettings extends DataViewObjectsParser {
   // Default color
   public defaultColor: string = "";
   // Show all
